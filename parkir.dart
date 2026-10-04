@@ -21,15 +21,15 @@ int tarifParkir(
     jam = 1;
   }
   int tarifTotal = 0;
-  switch (kendaraan) {
-    case JenisKendaraan.motor:
+  switch (kendaraan) {// mengecek variabel kendaraan dari jeniskendaraan
+    case JenisKendaraan.motor://data mana yang sedang di cari dan menjalankan fungsi untuk tarif progresif 
       tarifTotal = 2000 + (jam - 1) * 1000;
       break;
     case JenisKendaraan.mobil:
       tarifTotal = 5000 + (jam - 1) * 3000;
       break;
   }
-  return tarifTotal + denda;
+  return tarifTotal + denda;//menghitung seluruh tarif dan menghitung denda
 }
 
 void main() {
